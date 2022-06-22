@@ -1,7 +1,7 @@
-from fastapi import APIRouter
-from controller import BikeController, ClientController, PartnerController, BillingController
-from db import DataController, bills, partners, clients, bikes
-from models import Bike, Client, Partner, Bill
+from fastapi import FastAPI, APIRouter, HTTPException
+from bikestore.controller import BikeController, ClientController, PartnerController, BillingController
+from bikestore.db import DataController, bills, partners, clients, bikes
+from bikestore.models import Bike, Client, Partner, Bill
 
 
 bike_routes = APIRouter()
@@ -13,7 +13,7 @@ data_controller = DataController()
 
 
 # bike routes
-@bike_routes.get('/bikes/list_all', tags=['bikes'])
+@bike_routes.get('/bikes/list_all{b1}', tags=['bikes'])
 def get_bikes():
     return bike_controller.list_bikes()
 

@@ -1,8 +1,8 @@
 import re
-import db
+from bikestore import db
 import datetime
 import uuid
-from models import Bill
+from bikestore.models import Bill
 
 
 class BikeController:
@@ -119,4 +119,3 @@ class BillingController:
         self.billing = billing
 
         db.bills.append(bill)
-

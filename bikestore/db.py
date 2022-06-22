@@ -1,4 +1,4 @@
-from models import Bike, Client, Partner, Bill
+from bikestore.models import Bike, Client, Partner, Bill
 import pickle
 
 

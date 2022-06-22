@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
-from routes import bike_routes
+from bikestore.routes import bike_routes
 
 
 app = FastAPI()
