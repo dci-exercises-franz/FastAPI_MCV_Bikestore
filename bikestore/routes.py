@@ -1,7 +1,7 @@
-from fastapi import FastAPI, APIRouter, HTTPException
+from fastapi import APIRouter
 from bikestore.controller import BikeController, ClientController, PartnerController, BillingController
-from bikestore.db import DataController, bills, partners, clients, bikes
-from bikestore.models import Bike, Client, Partner, Bill
+from bikestore.db import DataController
+from bikestore.models import Bike, Client, Partner
 
 
 bike_routes = APIRouter()
